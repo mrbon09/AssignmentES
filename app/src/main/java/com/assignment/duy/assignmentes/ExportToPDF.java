@@ -15,4 +15,8 @@ public class ExportToPDF extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.export_pdf, container, false);
     }
+
+    public void createPDF (View view) {
+
+    }
 }
