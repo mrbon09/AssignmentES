@@ -1,7 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:ignore="NamespaceTypo">
+    <!--android:background="@drawable/exercise"-->
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:id="@+id/timePicker"
+        android:layout_marginTop="50dp"
+        android:timePickerMode="spinner"
+        > </TimePicker>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="Exercise Time: from"
+        android:id="@+id/timeTextView"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/timePicker"
+        android:layout_marginTop="35dp"
+        android:text="Set Exercise Time"
+        android:onClick="setTimer"
+
+        android:id="@+id/Button"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Button"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="Sleep time: from" />
+
+    <TimePicker
+        android:id="@+id/timePickerSleep"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:timePickerMode="spinner" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/timePicker"
+        android:text="For how long" />
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/timePickerSleep"
+        android:text="For how long" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editText4"
+        android:layout_marginTop="10dp"
+        android:text="Sleep time"
+        android:onClick="setTimer2"
+
+        android:id="@+id/Button2"
+        />
+
+
 
 </RelativeLayout>
