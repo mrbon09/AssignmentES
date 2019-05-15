@@ -62,10 +62,9 @@ public class ExportToPDF extends Fragment {
         }; */
 
         Font inforFont = new Font(Font.FontFamily.TIMES_ROMAN, 36,
-                Font.NORMAL, BaseColor.BLACK);
+                Font.ITALIC, BaseColor.BLACK);
 
         Paragraph paragraph_name = new Paragraph(name.getText().toString(), inforFont);
-        paragraph_name.setSpacingAfter(15);
         Paragraph paragraph_bd = new Paragraph(bd.getText().toString(), inforFont);
         paragraph_bd.setSpacingAfter(15);
 
@@ -122,16 +121,36 @@ public class ExportToPDF extends Fragment {
             doc.add(paragraph_h);
             doc.add(paragraph_name);
             doc.add(paragraph_bd);
-            doc.add(paragraph_c1);
-            doc.add(paragraph_c2);
-            doc.add(paragraph_c3);
-            doc.add(paragraph_c4);
-            doc.add(paragraph_c5);
-            doc.add(paragraph_c6);
-            doc.add(paragraph_c7);
-            doc.add(paragraph_c8);
-            doc.add(paragraph_c9);
-            doc.add(paragraph_c10);
+            if (checkbox1.isChecked()) {
+                doc.add(paragraph_c1);
+            }
+            if (checkbox2.isChecked()) {
+                doc.add(paragraph_c2);
+            }
+            if (checkbox3.isChecked()) {
+                doc.add(paragraph_c3);
+            }
+            if (checkbox4.isChecked()) {
+                doc.add(paragraph_c4);
+            }
+            if (checkbox5.isChecked()) {
+                doc.add(paragraph_c5);
+            }
+            if (checkbox6.isChecked()) {
+                doc.add(paragraph_c6);
+            }
+            if (checkbox7.isChecked()) {
+                doc.add(paragraph_c7);
+            }
+            if (checkbox8.isChecked()) {
+                doc.add(paragraph_c8);
+            }
+            if (checkbox9.isChecked()) {
+                doc.add(paragraph_c9);
+            }
+            if (checkbox10.isChecked()) {
+                doc.add(paragraph_c10);
+            }
             doc.close();
         } catch (DocumentException e) {
             e.printStackTrace();
