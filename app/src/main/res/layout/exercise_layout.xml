@@ -33,7 +33,6 @@
         android:layout_marginTop="35dp"
         android:text="Set Exercise Time"
         android:onClick="setTimer"
-
         android:id="@+id/Button"
         />
 
@@ -65,7 +64,7 @@
 
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/timePicker"
-        android:text="For how long" />
+        android:hint="For how long" />
     <EditText
         android:id="@+id/editText4"
         android:layout_width="wrap_content"

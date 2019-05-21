@@ -1,6 +1,6 @@
 package com.assignment.duy.assignmentes;
 
-import android.support.annotation.NavigationRes;
+/*import android.support.annotation.NavigationRes;*/
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;

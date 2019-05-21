@@ -38,7 +38,8 @@
         android:layout_below="@+id/textView7"
         android:layout_marginStart="27dp"
         android:layout_marginTop="14dp"
-        android:text="- Height: 170cm" />
+        android:text="- Height: 170cm"
+        android:buttonTint="@color/colorPrimaryDark"/>
 
     <CheckBox
         android:id="@+id/checkBox3"
@@ -46,7 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/checkBox2"
         android:layout_below="@+id/checkBox2"
-        android:text="- Weight: 70kg" />
+        android:text="- Weight: 70kg"
+        android:buttonTint="@color/colorPrimaryDark"/>
 
     <CheckBox
         android:id="@+id/checkBox4"
@@ -54,7 +56,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/checkBox3"
         android:layout_below="@+id/checkBox3"
-        android:text="- Heartbeat: 65bpm" />
+        android:text="- Heartbeat: 65bpm"
+        android:buttonTint="@color/colorPrimaryDark"/>
 
     <CheckBox
         android:id="@+id/checkBox5"
@@ -62,7 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/checkBox4"
         android:layout_below="@+id/checkBox4"
-        android:text="- Average sleeping time: 8 hours" />
+        android:text="- Average sleeping time: 8 hours"
+        android:buttonTint="@color/colorPrimaryDark"/>
 
     <CheckBox
         android:id="@+id/checkBox6"
@@ -70,7 +74,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/checkBox5"
         android:layout_below="@+id/checkBox5"
-        android:text="- Diet: 3 meals/day" />
+        android:text="- Diet: 3 meals/day"
+        android:buttonTint="@color/colorPrimaryDark"/>
 
     <CheckBox
         android:id="@+id/checkBox7"
@@ -78,7 +83,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/checkBox6"
         android:layout_below="@+id/checkBox6"
-        android:text="- Workout time: 2 hours/day" />
+        android:text="- Workout time: 2 hours/day"
+        android:buttonTint="@color/colorPrimaryDark"/>
 
     <CheckBox
         android:id="@+id/checkBox8"
@@ -86,7 +92,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/checkBox7"
         android:layout_below="@+id/checkBox7"
-        android:text="- Sickness: No" />
+        android:text="- Sickness: No"
+        android:buttonTint="@color/colorPrimaryDark"/>
 
     <CheckBox
         android:id="@+id/checkBox9"
@@ -94,7 +101,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/checkBox8"
         android:layout_below="@+id/checkBox8"
-        android:text="- Supervision Doctor/Trainer: Dr.Paul" />
+        android:text="- Supervision Doctor/Trainer: Dr.Paul"
+        android:buttonTint="@color/colorPrimaryDark"/>
 
     <CheckBox
         android:id="@+id/checkBox10"
@@ -102,7 +110,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/checkBox9"
         android:layout_below="@+id/checkBox9"
-        android:text="- GYM center: CityGYM" />
+        android:text="- GYM center: CityGYM"
+        android:buttonTint="@color/colorPrimaryDark"/>
 
     <CheckBox
         android:id="@+id/checkBox11"
@@ -111,7 +120,7 @@
         android:layout_alignStart="@+id/checkBox10"
         android:layout_below="@+id/checkBox10"
         android:text="- Note: broken ligament"
-        android:buttonTint="@color/colorPrimary"/>
+        android:buttonTint="@color/colorPrimaryDark"/>
 
     <TextView
         android:id="@+id/textView5"
