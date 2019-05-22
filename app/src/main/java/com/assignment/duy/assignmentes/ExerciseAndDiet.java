@@ -37,23 +37,27 @@ public class ExerciseAndDiet extends Fragment /*implements  TimePickerDialog.OnT
 
     private static int timeHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
     private static int timeMinute = Calendar.getInstance().get(Calendar.MINUTE);
-    TextView mTextView;
+    private static int timeHour2 = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+    private static int timeMinute2 = Calendar.getInstance().get(Calendar.MINUTE);
+    TextView mTextView,mTextView2;
     Context mContext;
-    Button buttonTimePicker, buttonCancelAlarm;
+    Button buttonTimePicker, buttonCancelAlarm,buttonTimepicker2,buttonCancelAlarm2;
     public Activity mainActivity;
     @Override
-    public void onAttach (Context context){
+    public void onAttach(Context context) {
         super.onAttach(context);
-
-        this.mainActivity = context instanceof Activity ? (Activity) context : null;
+        this.mContext=context;
+        if (context instanceof Activity){
+            mainActivity =(Activity) context;
+        }
     }
 
 
 
 
-    AlarmManager alarmManager = (AlarmManager) mainActivity.getSystemService(ALARM_SERVICE);
-    Intent intent = new Intent(mainActivity, ExerciseAndDiet_Broadcast.class);
-    PendingIntent pendingIntent = PendingIntent.getBroadcast(getActivity(), 1, intent, 0);
+    //AlarmManager alarmManager = (AlarmManager) mainActivity.getSystemService(ALARM_SERVICE);
+    //Intent intent = new Intent(mainActivity, ExerciseAndDiet_Broadcast.class);
+    //PendingIntent pendingIntent = PendingIntent.getBroadcast(getActivity(), 1, intent, 0);
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.exercise_layout, container, false);
@@ -84,6 +88,33 @@ public class ExerciseAndDiet extends Fragment /*implements  TimePickerDialog.OnT
                 cancelAlarm();
             }
         });
+        mTextView2 = view.findViewById(R.id.textView2);
+        buttonTimepicker2 = view.findViewById(R.id.button_timepicker2);
+        buttonTimepicker2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putInt("time_hour", timeHour2);
+                bundle.putInt("time_minute", timeMinute2);
+                DialogFragment timePicker = new TimePickerFragment(new MyHandler2());
+                timePicker.setArguments(bundle);
+                FragmentManager manager = getActivity().getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.add(timePicker, "time_picker");
+                transaction.commit();
+                //timePicker.show(getActivity().getSupportFragmentManager(), "time picker");
+
+            }
+        });
+
+        buttonCancelAlarm2 = view.findViewById(R.id.button_cancel2);
+        buttonCancelAlarm2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cancelAlarm2();
+            }
+        });
+
         return view;
     }
 
@@ -103,6 +134,12 @@ public class ExerciseAndDiet extends Fragment /*implements  TimePickerDialog.OnT
 
         mTextView.setText(timeText);
     }
+    private void updateTimeText2(Calendar c) {
+        String timeText = "Alarm set for: ";
+        timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c.getTime());
+
+        mTextView2.setText(timeText);
+    }
 
     private void startAlarm() {
 
@@ -114,7 +151,19 @@ public class ExerciseAndDiet extends Fragment /*implements  TimePickerDialog.OnT
         }
         updateTimeText(c);
 
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
+        //alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
+    }
+    private void startAlarm2() {
+
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.HOUR_OF_DAY, timeHour2);
+        c.set(Calendar.MINUTE, timeMinute2);
+        if (c.before(Calendar.getInstance())) {
+            c.add(Calendar.DATE, 1);
+        }
+        updateTimeText2(c);
+
+        //alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
     }
 
     private void cancelAlarm() {
@@ -122,8 +171,16 @@ public class ExerciseAndDiet extends Fragment /*implements  TimePickerDialog.OnT
         Intent intent = new Intent(getActivity(), ExerciseAndDiet_Broadcast.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, 1, intent, 0);*/
 
-        alarmManager.cancel(pendingIntent);
+        //alarmManager.cancel(pendingIntent);
         mTextView.setText("Alarm canceled");
+    }
+    private void cancelAlarm2() {
+        /*AlarmManager alarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(getActivity(), ExerciseAndDiet_Broadcast.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, 1, intent, 0);*/
+
+        //alarmManager.cancel(pendingIntent);
+        mTextView2.setText("Alarm canceled");
     }
 
     class MyHandler extends Handler {
@@ -135,5 +192,17 @@ public class ExerciseAndDiet extends Fragment /*implements  TimePickerDialog.OnT
             mTextView.setText(timeHour + ":" + timeMinute);
             startAlarm();
         }
+
+    }
+    class MyHandler2 extends Handler {
+        @Override
+        public void handleMessage(Message msg) {
+            Bundle bundle = msg.getData();
+            timeHour2 = bundle.getInt("time_hour");
+            timeMinute2 = bundle.getInt("time_minute");
+            mTextView.setText(timeHour2 + ":" + timeMinute2);
+            startAlarm2();
+        }
+
     }
 }
