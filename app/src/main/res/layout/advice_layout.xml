@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/timer">
+    android:layout_height="match_parent">
+    <!--android:background="@drawable/timer"-->
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="insert your height:"
+        android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/height"
+        android:layout_centerHorizontal="true"
+        android:hint="insert your weight"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/BMIButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="CalculateBMIResult"
+
+        android:text="Calculate BMI and get advices" />
 </RelativeLayout>
