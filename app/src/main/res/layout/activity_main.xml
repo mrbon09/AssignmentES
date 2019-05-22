@@ -97,7 +97,7 @@
         android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true"
         android:textColor="#ff0000"
-        android:text="Please enter account!"
+        android:text=""
         android:layout_marginTop="12dp" />
 
 </RelativeLayout>

@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, MainView.class);
             startActivity(intent);
         }
+        else if ((userName.equals("")) || (userPassword.equals(""))){
+            Info.setText("Please Enter Username or Password!");
+        }
         else{
             Info.setText("Please Try Aigain! ^^");
         }
