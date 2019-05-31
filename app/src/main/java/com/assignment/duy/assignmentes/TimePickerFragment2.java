@@ -16,12 +16,12 @@ import android.os.Message;
 
 
 
-public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
+public class TimePickerFragment2 extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
     /*private int timeHour;
     private int timeMinute;
     private Handler handler;
 */
-    public TimePickerFragment(){
+    public TimePickerFragment2(){
 
     }
 
@@ -43,8 +43,8 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         c.set(Calendar.HOUR_OF_DAY, hourOfDay);
         c.set(Calendar.MINUTE, minute);
         c.set(Calendar.SECOND, 0);
-        ExerciseAndDiet.updateTimeText(c);
-        ExerciseAndDiet.setAlarm(c);
+        ExerciseAndDiet.updateTimeText2(c);
+        ExerciseAndDiet.setAlarm2(c);
     }
 
 }
