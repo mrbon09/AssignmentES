@@ -24,15 +24,6 @@ public class NewsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.news_layout, container, false); // call layout
-        /*Button title1 = view.findViewById(R.id.button1);
-        title1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction fr=getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container, new Fragment1());
-                fr.commit();
-            }
-        });*/
         TextView text= view.findViewById(R.id.editText3);
         String t="WeLcoMe!!!!!!!";
         SpannableString ss=new SpannableString(t);
