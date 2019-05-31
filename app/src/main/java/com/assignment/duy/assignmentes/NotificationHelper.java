@@ -34,8 +34,6 @@ public class NotificationHelper extends ContextWrapper {
 
         getManager().createNotificationChannel(channel2);
         NotificationManager manager = getSystemService(NotificationManager.class);
-        manager.createNotificationChannel(channel);
-        manager.createNotificationChannel(channel2);
 
     }
 
