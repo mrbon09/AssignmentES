@@ -28,12 +28,11 @@ public class NotificationHelper extends ContextWrapper {
     private void createChannels() {
         NotificationChannel channel = new NotificationChannel(channel1ID, channel1Name, NotificationManager.IMPORTANCE_HIGH);
 
-        getManager().createNotificationChannel(channel);
-
         NotificationChannel channel2 = new NotificationChannel(channel2ID, channel2Name, NotificationManager.IMPORTANCE_DEFAULT);
 
-        getManager().createNotificationChannel(channel2);
         NotificationManager manager = getSystemService(NotificationManager.class);
+        manager.createNotificationChannel(channel);
+        manager.createNotificationChannel(channel2);
 
     }
 
