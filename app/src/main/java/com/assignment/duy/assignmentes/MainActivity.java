@@ -40,20 +40,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("WrongViewCast")
-    public void loginClick(String userName, String userPassword){
+    public void loginClick(String userName, String userPassword) {
 
-        if((userName.equals("mrbon09")) && (userPassword.equals("123456789!"))){
+        if ((userName.equals("mrbon09")) && (userPassword.equals("123456789!"))) {
             Intent intent = new Intent(this, MainView.class);
             startActivity(intent);
-        }
-        else if ((userName.equals("")) || (userPassword.equals(""))){
+        } else if ((userName.equals("")) || (userPassword.equals(""))) {
             Info.setText("Please Enter Username or Password!");
-        }
-        else{
+        } else {
             Info.setText("Please Try Aigain! ^^");
         }
+    }
 
 
 
+    public void loginClick(View view){
+        Intent intent = new Intent(this, MainView.class);
+        startActivity(intent);
     }
 }

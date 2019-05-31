@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="For the last twenty years, Melinda Gates has been on a mission. Her goal, as co-chair of the Bill and Melinda Gates Foundation, has been to find solutions for people with the most urgent needs, wherever they live. Throughout this journey, one thing has become increasingly clear to her: If you want to lift a society up, invest in women.
+
+In this candid and inspiring book, Gates traces her awakening to the link between women's empowerment and the health of societies. She shows some of the tremendous opportunities that exist right now to “turbo-charg change. And she provides simple and effective ways each one of us can make a difference.
+
+        Convinced that all women should be free to decide whether and when to have children, Gates took her first step onto the global stage to make a stand for family planning. That step launched her into further efforts: to ensure women everywhere have access to every kind of job; to encourage men around the globe to share equally in the burdens of household work; to advocate for paid family leave for everyone; to eliminate gender bias in all its forms.
+
+    Throughout, Gates introduces us to her heroes in the movement towards equality, offers startling data, shares moving conversations she's had with women from all over the world—and shows how we can all get involved. (less)">
+
+    </TextView>
+
+
+</ScrollView>
