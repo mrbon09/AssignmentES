@@ -3,6 +3,7 @@ package com.assignment.duy.assignmentes;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.app.TimePickerDialog.OnTimeSetListener;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
@@ -15,45 +16,35 @@ import android.os.Message;
 
 
 
-@SuppressLint("ValidFragment")
-public class TimePickerFragment extends DialogFragment {
-    private int timeHour;
+public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
+    /*private int timeHour;
     private int timeMinute;
     private Handler handler;
+*/
+    public TimePickerFragment(){
 
-
-    public TimePickerFragment(Handler handler){
-        this.handler=handler;
     }
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        Bundle bundle=getArguments();
-        timeHour = bundle.getInt("time_hour");
-        timeMinute = bundle.getInt("time_minute");
-        TimePickerDialog.OnTimeSetListener listener = new TimePickerDialog.OnTimeSetListener() {
-            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                timeHour = hourOfDay;
-                timeMinute = minute;
-                Bundle b = new Bundle();
-                b.putInt("time_hour", timeHour);
-                b.putInt("time_minute", timeMinute);
-                Message msg = new Message();
-                msg.setData(b);
-                handler.sendMessage(msg);
-            }
-        };
-        return new TimePickerDialog(getActivity(), listener, timeHour, timeMinute, false);
+        // Use the current time as the default values for the picker
+
+        final Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
+
+        // Create a new instance of TimePickerDialog and return it
+        return new TimePickerDialog(getActivity(), this, hour, minute,
+                DateFormat.is24HourFormat(getActivity()));
     }
-    /*@NonNull
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         Calendar c = Calendar.getInstance();
-        int hour = c.get(Calendar.HOUR_OF_DAY);
-        int minute = c.get(Calendar.MINUTE);
-        TimePickerDialog T = new TimePickerDialog(getActivity(), (TimePickerDialog.OnTimeSetListener) getActivity(), hour, minute, DateFormat.is24HourFormat(getActivity()));
-        //TimePickerDialog T=new  TimePickerDialog(getActivity(), this, hour, minute, true);
-        return T;
-    }*/
-
+        c.set(Calendar.HOUR_OF_DAY, hourOfDay);
+        c.set(Calendar.MINUTE, minute);
+        c.set(Calendar.SECOND, 0);
+        ExerciseAndDiet.updateTimeText(c);
+        ExerciseAndDiet.setAlarm(c);
+    }
 
 }
