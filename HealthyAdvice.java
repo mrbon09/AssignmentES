@@ -64,9 +64,9 @@ public class HealthyAdvice extends Fragment {
                 double heightd = Double.parseDouble(height);
                 double weightd = Double.parseDouble(weight);
                 double BMI = weightd / (heightd * heightd);
-            System.out.print("\nThe Body Mass Index (BMI) is " + BMI + " kg/m2");
             if (BMI < 18.5) {
-                txt.setText("\n\n\n\n\nYou are Underweight: being underweight is defined as having a body mass index (BMI) below 18.5. This is estimated to be less than the body mass needed to sustain optimal health.\n" +
+                txt.setText("\n\n\n\n\nThe Body Mass Index (BMI) is " + BMI + " kg/m2\n" +
+                        "You are Underweight: being underweight is defined as having a body mass index (BMI) below 18.5. This is estimated to be less than the body mass needed to sustain optimal health.\n" +
                         "Several Things Can Cause Someone to Become Underweight:\n" +
                         "1.•\tEating disorders: This includes anorexia nervosa, a serious mental disorder.\n" +
                         "2.•\tThyroid problems: Having an overactive thyroid (hyperthyroidism) can boost metabolism and cause unhealthy weight loss.\n" +
@@ -108,7 +108,8 @@ public class HealthyAdvice extends Fragment {
 
             }
             if ((BMI >= 18.5) && (BMI <= 24.9)) {
-                txt.setText("\n\n\n\n\nCongratulations, you have an ideal BMI that healthy person needs, let's keep your fitness:\n" +
+                txt.setText("\n\n\n\n\nThe Body Mass Index (BMI) is " + BMI + " kg/m2\n" +
+                        "Congratulations, you have an ideal BMI that healthy person needs, let's keep your fitness:\n" +
                         "Eating a well-balanced diet can help you get the calories and nutrients you need to fuel your daily activities, including regular exercise.\n" +
                         "1.Count on the right carbohydrates\n" +
                         "2.Pack protein into your snacks and meals\n" +
@@ -147,7 +148,8 @@ public class HealthyAdvice extends Fragment {
 
             }
             if ((BMI >= 25) && (BMI <= 29.9)) {
-                txt.setText("\n\n\n\n\nYou are overweight:eating excess calories leads to weight gain\n" +
+                txt.setText("\n\n\n\n\nThe Body Mass Index (BMI) is " + BMI + " kg/m2\n" +
+                        "You are overweight:eating excess calories leads to weight gain\n" +
                         "Healthy Diet Tips for Overweight People:\n" +
                         "1: Ensure a Sufficient Intake of B Vitamins\n" +
                         "2: Be Sure to Get Enough Vitamin D to Reduce Fat Accumulation in Winter\n" +
@@ -171,7 +173,8 @@ public class HealthyAdvice extends Fragment {
                         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3738392/\n");
             }
             if ((BMI >= 30) && (BMI <= 40)) {
-                txt.setText("\n\n\n\n\nWarning, you are now obese:abnormal or excessive fat accumulation that presents a risk to health.\n " +
+                txt.setText("\n\n\n\n\nThe Body Mass Index (BMI) is " + BMI + " kg/m2\n" +
+                        "Warning, you are now obese:abnormal or excessive fat accumulation that presents a risk to health.\n " +
                         "Here are some tips for you to follow with doctor's treatment:\n" +
                         "Group A\" is made up of those obese people who are able to perform normal \"lifting\" style exercises and light to moderate cardio with very little to no pain in their bones. (Muscle pain and soreness is always acceptable). My program for this group is made up of some light lifting to introduce them to working out with weights slowly.\n" +
                         "\"Group B\" is made up of those obese people who are not able to perform normal \"lifting\" style exercises without additional pain coming from their joints and bones, but are able to do some light cardio. This workout program is made up of light cardio performed throughout the week.\n" +
