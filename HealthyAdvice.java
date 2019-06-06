@@ -17,34 +17,16 @@ import org.w3c.dom.Text;
 import java.util.Scanner;
 
 public class HealthyAdvice extends Fragment {
-    //public static void main(String args[]) {
-        /*Scanner sc = new Scanner(System.in);
-        System.out.print("Input weight in kilogram: ");
-        double weight = sc.nextDouble();
-        System.out.print("\nInput height in meters: ");
-        double height = sc.nextDouble();*/
+
         Button ButtonBMI;
         TextView mTextView;
        // Button btn;
         TextView txt;
-        //@Override
-//        public void onCreate(Bundle savedInstanceState){
-////            super.onCreate(savedInstanceState);
-////            setContentView(R.layout.activity_main);
-////            txt=(TextView) findViewById(R.id.mytext);
-////            btn=(Button) findViewById(R.id.mybutton);
-////            bỏ cái này đi
-////            btn.setOnClickListener(new View.OnClickListener(){
-////                @Override
-////                public void OnClick(View v){
-////                    txt.setText("hello mother fucker");
-////                }
-////            });
-////        } chay thu xem
+
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
             View view = inflater.inflate(R.layout.advice_layout, container, false);
             super.onCreate (savedInstanceState);
-            final EditText height = view.findViewById(R.id.height); // lấy data mytext chưa khai báo thì phải
+            final EditText height = view.findViewById(R.id.height);
             final EditText weight = view.findViewById(R.id.weight);
              txt=(TextView) view.findViewById(R.id.txt);
             ButtonBMI = (Button)view.findViewById(R.id.BMIButton);
@@ -59,7 +41,7 @@ public class HealthyAdvice extends Fragment {
             }
 
 
-        public void CalculateBMIResult(String height,String weight, TextView txt )// height vs weight xài dc do dc khai báo ở đây nè
+        public void CalculateBMIResult(String height,String weight, TextView txt )
             {
                 double heightd = Double.parseDouble(height);
                 double weightd = Double.parseDouble(weight);
