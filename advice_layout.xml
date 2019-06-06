@@ -58,9 +58,8 @@
                  android:layout_below="@+id/weight"
                  android:layout_centerHorizontal="true"
                  android:layout_marginTop="10dp"
-                 android:onClick="CalculateBMIResult"
-                 android:text="Calculate BMI and get advices" />
 
+                 android:text="@string/calculate_bmi_and_get_advices" />
 
 
          </RelativeLayout>
