@@ -16,8 +16,6 @@ public class ExerciseAndDiet_Broadcast extends BroadcastReceiver {
         NotificationHelper notificationHelper = new NotificationHelper(context);
         NotificationCompat.Builder nb = notificationHelper.getChannelNotification();
         notificationHelper.getManager().notify(1, nb.build());
-
-
     }
 
 }

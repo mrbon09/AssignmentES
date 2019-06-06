@@ -10,7 +10,7 @@
         android:id="@+id/button_timepicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Sleep Time"
+        android:text="Set Workout Time"
         android:layout_centerHorizontal="true"/>
     <Button
         android:layout_width="wrap_content"
@@ -18,7 +18,7 @@
         android:id="@+id/button_cancel"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
-        android:text="Cancel Sleep Time"
+        android:text="Cancel Scheduled workout Time"
         />
 
     <TextView
@@ -36,14 +36,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
         android:layout_centerHorizontal="true"
-        android:text="Set workout" />
+        android:text="Set SleepTime" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_cancel2"
         android:layout_marginTop="190dp"
         android:layout_centerHorizontal="true"
-        android:text="Cancel schedule Time"
+        android:text="Cancel scheduled Sleep Time"
         />
 
     <TextView
