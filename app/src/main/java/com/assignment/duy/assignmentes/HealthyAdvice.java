@@ -87,7 +87,7 @@ public class HealthyAdvice extends Fragment {
                         "https://familydoctor.org/healthy-ways-to-gain-weight-if-youre-underweight/\n");
 
             }
-            if ((BMI >= 18.5) && (BMI <= 24.9)) {
+            else if ((BMI >= 18.5) && (BMI <= 24.9)) {
                 txt.setText("\n\n\n\n\nThe Body Mass Index (BMI) is " + BMI + " kg/m2\n" +
                         "Congratulations, you have an ideal BMI that healthy person needs, let's keep your fitness:\n" +
                         "Eating a well-balanced diet can help you get the calories and nutrients you need to fuel your daily activities, including regular exercise.\n" +
@@ -127,7 +127,7 @@ public class HealthyAdvice extends Fragment {
                         "https://www.healthline.com/nutrition/11-ways-to-lose-weight-without-diet-or-exercise\n");
 
             }
-            if ((BMI >= 25) && (BMI <= 29.9)) {
+            else if ((BMI >= 25) && (BMI <= 29.9)) {
                 txt.setText("\n\n\n\n\nThe Body Mass Index (BMI) is " + BMI + " kg/m2\n" +
                         "You are overweight:eating excess calories leads to weight gain\n" +
                         "Healthy Diet Tips for Overweight People:\n" +
@@ -152,7 +152,7 @@ public class HealthyAdvice extends Fragment {
                         "https://rw.yourketo.diet/?gclid=EAIaIQobChMIx72nps2c4gIVxZWPCh0UOgFwEAAYASAAEgIOfvD_BwE\n" +
                         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3738392/\n");
             }
-            if ((BMI >= 30) && (BMI <= 40)) {
+            else if ((BMI >= 30) && (BMI <= 40)) {
                 txt.setText("\n\n\n\n\nThe Body Mass Index (BMI) is " + BMI + " kg/m2\n" +
                         "Warning, you are now obese:abnormal or excessive fat accumulation that presents a risk to health.\n " +
                         "Here are some tips for you to follow with doctor's treatment:\n" +

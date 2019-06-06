@@ -51,10 +51,10 @@ public class MainView extends AppCompatActivity implements NavigationView.OnNavi
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new SearchCenter()).commit();
                 break;
-            case R.id.nav_timer:
+            /*case R.id.nav_timer:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HealthyAdvice()).commit();
-                break;
+                break;*/
             case R.id.nav_run:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ExerciseAndDiet()).commit();
