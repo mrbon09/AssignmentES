@@ -1,6 +1,6 @@
 package com.assignment.duy.assignmentes;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.widget.Button;
@@ -17,16 +17,14 @@ import org.w3c.dom.Text;
 import java.util.Scanner;
 
 public class HealthyAdvice extends Fragment {
-
         Button ButtonBMI;
         TextView mTextView;
        // Button btn;
         TextView txt;
-
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
             View view = inflater.inflate(R.layout.advice_layout, container, false);
             super.onCreate (savedInstanceState);
-            final EditText height = view.findViewById(R.id.height);
+            final EditText height = view.findViewById(R.id.height); // lấy data mytext chưa khai báo thì phải
             final EditText weight = view.findViewById(R.id.weight);
              txt=(TextView) view.findViewById(R.id.txt);
             ButtonBMI = (Button)view.findViewById(R.id.BMIButton);
@@ -41,7 +39,7 @@ public class HealthyAdvice extends Fragment {
             }
 
 
-        public void CalculateBMIResult(String height,String weight, TextView txt )
+        public void CalculateBMIResult(String height,String weight, TextView txt )// height vs weight xài dc do dc khai báo ở đây nè
             {
                 double heightd = Double.parseDouble(height);
                 double weightd = Double.parseDouble(weight);
@@ -82,14 +80,14 @@ public class HealthyAdvice extends Fragment {
                         "7.Take creatine. The muscle building supplement creatine monohydrate can help you gain a few pounds in muscle weight.\n" +
                         "8.Get quality sleep. Sleeping properly is very important for muscle growth.\n" +
                         "9.Eat your protein first and vegetables last. If you have a mix of foods on your plate, eat the calorie-dense and protein-rich foods first. Eat the vegetables last.\n" +
-                        "10.Don't smoke. Smokers tend to weigh less than non-smokers, and quitting smoking often leads to weight gain." +
-                        "more information about diets and exercises below: \n" +
-                        "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/underweight/faq-20058429 \n" +
-                        "https://www.medicalnewstoday.com/articles/321518.php\n" +
-                        "https://familydoctor.org/healthy-ways-to-gain-weight-if-youre-underweight/\n");
+                        "10.Don't smoke. Smokers tend to weigh less than non-smokers, and quitting smoking often leads to weight gain.\n" +
+                        "more information about diets and exercises below: \n\n" +
+                        "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/underweight/faq-20058429 \n\n" +
+                        "https://www.medicalnewstoday.com/articles/321518.php\n\n" +
+                        "https://familydoctor.org/healthy-ways-to-gain-weight-if-youre-underweight/\n\n");
 
             }
-            if ((BMI >= 18.5) && (BMI <= 24.9)) {
+            else if ((BMI >= 18.5) && (BMI <= 24.9)) {
                 txt.setText("\n\n\n\n\nThe Body Mass Index (BMI) is " + BMI + " kg/m2\n" +
                         "Congratulations, you have an ideal BMI that healthy person needs, let's keep your fitness:\n" +
                         "Eating a well-balanced diet can help you get the calories and nutrients you need to fuel your daily activities, including regular exercise.\n" +
@@ -121,15 +119,15 @@ public class HealthyAdvice extends Fragment {
                         "7.Don’t cut too many calories\n" +
                         "If you’re trying to lose weight or tone your body, you may be tempted to cut a ton of calories from your meals. Cutting calories is a key part of weight loss, but it’s possible to go too far.\n" +
                         "\n" +
-                        "Weight loss diets should never leave you feeling exhausted or ill. Those are signs that you’re not getting the calories you need for good health and fitness." +
+                        "Weight loss diets should never leave you feeling exhausted or ill. Those are signs that you’re not getting the calories you need for good health and fitness.\n" +
 
-                        "more information about diets and exercises below:\n" +
-                        "https://www.health.com/weight-loss/30-simple-diet-and-fitness-tips\n" +
-                        "https://www.healthline.com/nutrition/14-ways-to-stick-to-a-diet#section7\n" +
-                        "https://www.healthline.com/nutrition/11-ways-to-lose-weight-without-diet-or-exercise\n");
+                        "more information about diets and exercises below:\n\n" +
+                        "https://www.health.com/weight-loss/30-simple-diet-and-fitness-tips\n\n" +
+                        "https://www.healthline.com/nutrition/14-ways-to-stick-to-a-diet#section7\n\n" +
+                        "https://www.healthline.com/nutrition/11-ways-to-lose-weight-without-diet-or-exercise\n\n");
 
             }
-            if ((BMI >= 25) && (BMI <= 29.9)) {
+            else if ((BMI >= 25) && (BMI <= 29.9)) {
                 txt.setText("\n\n\n\n\nThe Body Mass Index (BMI) is " + BMI + " kg/m2\n" +
                         "You are overweight:eating excess calories leads to weight gain\n" +
                         "Healthy Diet Tips for Overweight People:\n" +
@@ -149,12 +147,12 @@ public class HealthyAdvice extends Fragment {
                         "14:  Burn Calories with Capsaicin\n" +
                         "15: Usually take exercise at least 1 time per day\n" +
 
-                        "more information about diets and exercises below:\n" +
-                        "https://www.rd.com/health/fitness/exercise-for-overweight/\n" +
-                        "https://rw.yourketo.diet/?gclid=EAIaIQobChMIx72nps2c4gIVxZWPCh0UOgFwEAAYASAAEgIOfvD_BwE\n" +
-                        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3738392/\n");
+                        "more information about diets and exercises below:\n\n" +
+                        "https://www.rd.com/health/fitness/exercise-for-overweight/\n\n" +
+                        "https://rw.yourketo.diet/?gclid=EAIaIQobChMIx72nps2c4gIVxZWPCh0UOgFwEAAYASAAEgIOfvD_BwE\n\n" +
+                        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3738392/\n\n");
             }
-            if ((BMI >= 30) && (BMI <= 40)) {
+            else if ((BMI >= 30) && (BMI <= 40)) {
                 txt.setText("\n\n\n\n\nThe Body Mass Index (BMI) is " + BMI + " kg/m2\n" +
                         "Warning, you are now obese:abnormal or excessive fat accumulation that presents a risk to health.\n " +
                         "Here are some tips for you to follow with doctor's treatment:\n" +
