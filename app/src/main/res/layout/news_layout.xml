@@ -2,8 +2,8 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@drawable/pichealth">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -18,98 +18,184 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="180dp"
-            android:layout_height="90dp"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="103dp"
-            android:layout_marginLeft="103dp"
-            android:layout_marginTop="144dp"
-            android:layout_marginRight="131dp"
-            android:background="@drawable/rounded_button"
+            android:layout_marginStart="53dp"
+            android:layout_marginLeft="53dp"
+            android:layout_marginTop="156dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/apinews"
+            android:drawableLeft="@drawable/ic_tuoitre"
             android:onClick="open1"
-            android:text="Being mortal" />
+            android:textStyle="italic"
+            android:text="Tuoi tre"
+            android:textSize="20dp"
+            android:textColor="#FF1744"/>
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="180dp"
-            android:layout_height="90dp"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="103dp"
-            android:layout_marginLeft="103dp"
-            android:layout_marginTop="274dp"
-            android:background="@drawable/rounded_button"
-            android:text="Pandemics" />
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="313dp"
+            android:background="@drawable/apinews"
+            android:drawableLeft="@drawable/ic_thanhnien"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:textColor="#2196F3"
+            android:text="Thanh nien" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="180dp"
-            android:layout_height="90dp"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="103dp"
-            android:layout_marginLeft="103dp"
-            android:layout_marginTop="410dp"
-            android:background="@drawable/rounded_button"
-            android:text="The gift of Adversity" />
+            android:layout_marginStart="52dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="494dp"
+            android:background="@drawable/apinews"
+            android:drawableLeft="@drawable/ic_dantri"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:textColor="#43a047"
+            android:text="Dan Tri" />
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="180dp"
-            android:layout_height="90dp"
+            android:layout_marginTop="668dp"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="103dp"
-            android:layout_marginLeft="103dp"
-            android:layout_marginTop="563dp"
-            android:background="@drawable/rounded_button"
-            android:text="Health re-visited" />
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="49dp"
+            android:background="@drawable/apinews"
+            android:drawableLeft="@drawable/ic_vnexpress"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:textColor="#c51162"
+            android:text="Vn express " />
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="62dp"
-            android:layout_alignParentStart="true"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="321dp"
-            android:layout_marginLeft="321dp"
-            android:layout_marginTop="76dp"
-            android:text="Search" />
+            android:layout_marginLeft="109dp"
+            android:layout_marginTop="55dp"
+            android:text="Our List"
+            android:textStyle="italic"
+            android:textColor="#d50000"
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/button6"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="1292dp"
+            android:background="@drawable/apinews"
+            android:drawableLeft="@drawable/ic_bbc"
+            android:textStyle="italic"
+            android:textColor="#212121"
+            android:textSize="20dp"
+            android:text="BBC" />
+
+        <Button
+            android:layout_marginTop="814dp"
+            android:id="@+id/button7"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="49dp"
+            android:background="@drawable/apinews"
+            android:drawableLeft="@drawable/ic_cnn"
+            android:textStyle="italic"
+            android:textColor="#d50000"
+            android:textSize="20dp"
+            android:text="CNN" />
+
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="47dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="968dp"
+            android:background="@drawable/apinews"
+            android:drawableLeft="@drawable/ic_sd"
+            android:text="ScienceDaily"
+            android:textColor="#212121"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <Button
+            android:layout_marginTop="1125dp"
+            android:id="@+id/button10"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="49dp"
+            android:background="@drawable/apinews"
+            android:drawableLeft="@drawable/ic_mmt"
+            android:textStyle="italic"
+            android:textColor="#18ffff"
+            android:textSize="20dp"
+            android:text="HealthNewsToday" />
+
+        -->
+        <!--
+        <Button
+            android:id="@+id/button12"
             android:layout_width="175dp"
             android:layout_height="99dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="103dp"
-            android:layout_marginLeft="103dp"
-            android:layout_marginTop="708dp"
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="49dp"
+            android:layout_marginTop="660dp"
             android:background="@drawable/rounded_button"
-            android:text="Flu and Death" />
+            android:text="Thuoc and Biet duoc" />
 
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="175dp"
+            android:layout_height="99dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="74dp"
-            android:layout_marginLeft="74dp"
-            android:layout_marginTop="48dp"
-            android:ems="10"
-            android:gravity="center"
-            android:typeface="serif"
-            android:inputType="textPersonName"
-            android:text="" />
+            android:layout_marginStart="52dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="782dp"
+            android:background="@drawable/rounded_button"
+            android:text="Suc khoe va doi song" />
+-->
     </RelativeLayout>
 </ScrollView>
