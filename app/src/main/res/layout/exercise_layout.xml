@@ -53,7 +53,122 @@
         android:layout_marginTop="250dp"
         android:layout_centerHorizontal="true"
         android:textSize="30sp"
-        android:text="No Alarm" />
+        android:text="No Alarm" /><?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="1000dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="476dp"
+            android:layout_height="132dp"
+            android:layout_marginTop="0dp"
+            android:background="#ffff52"
+            android:text="                 Alarms"
+            android:textAlignment="gravity"
+            android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button_timepicker"
+        android:layout_width="74dp"
+        android:layout_height="68dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/orange_button"
+        android:visibility="invisible"
+        android:text="Set Workout" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="83dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/orange_button"
+        android:visibility="invisible"
+        android:text="Cancel Workout" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        android:text="  No Workout time" />
+
+    <Button
+        android:id="@+id/button_timepicker2"
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/blue_button"
+        android:visibility="invisible"
+        android:text="Set Sleeptime" />
+
+    <Button
+        android:id="@+id/button_cancel2"
+        android:layout_width="94dp"
+        android:layout_height="96dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/blue_button"
+        android:visibility="invisible"
+        android:text="Cancel Sleep" />
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="194dp"
+            android:layout_height="96dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="500dp"
+            android:visibility="invisible"
+            android:background="@drawable/black_button"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:text="Back" />
+        <Button
+            android:id="@+id/button_practice"
+            android:layout_width="254dp"
+            android:layout_height="66dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/black_button"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:text="Practice set up" />
+        <Button
+            android:id="@+id/button_sleep"
+            android:layout_width="254dp"
+            android:layout_height="66dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="350dp"
+            android:background="@drawable/black_button"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:text="Sleep set up" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:text="  No Sleeptime"
+        android:visibility="invisible"
+        android:textSize="30sp" />
+    </RelativeLayout>
+    </HorizontalScrollView>
+
+</ScrollView>
 
 
 </RelativeLayout>
